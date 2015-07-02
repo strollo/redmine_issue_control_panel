@@ -13,11 +13,11 @@ class PanelIssueHooks < Redmine::Hook::ViewListener
   def view_issues_sidebar_issues_bottom(context = { })
     project = context[:project]
     request = context[:request]
-    issue_id = request.symbolized_path_parameters[:id]
+    issue_id = request.path_parameters[:id]
 	back = request.env['HTTP_REFERER']
 	
     if (issue_id)
-      issue = Issue.find(issue_id, :include => [:status])
+      issue = Issue.find(issue_id)
 	  if (issue)
 		if (User.current.allowed_to?(:edit_issues, project))
 		  o = ''

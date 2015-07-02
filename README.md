@@ -11,3 +11,8 @@ Authors: Konstantin Zaitcev, Alexandr Poplavsky, Pavel Vinokurov, Sergei Vasilie
 Opensource contributors: Mischa The Evil
 Inspired by JIRA
 Work sponsored by Axmor Software
+
+
+New to version 0.3.1:
+- Supports Redmine 3.x
+
